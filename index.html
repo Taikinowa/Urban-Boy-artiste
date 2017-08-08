@@ -20,7 +20,7 @@
       <button class="control" onclick="resume('audioPlayer')">Stop</button></p>
   <hr>
 <p><h2>Lord Rock ( ??? )</h2> 
-<div id="divPlayer"> <audio id="audioPlayer" ontimeupdate="update(this)"> <source src="Lord_Rock.mp3"></source> </audio><div>
+<div id="divPlayer2"> <audio id="audioPlayer" ontimeupdate="update(this)"> <source src="Lord_Rock.mp3"></source> </audio><div>
 <div id="progressBarControl">  <div id="progressBar">Pas de lecture</div> </div>
       </div>
 
@@ -31,7 +31,7 @@
 
   <hr>
 <p><h2>Dragon Steal ( ??? )</h2>
-   <div id="divPlayer">
+   <div id="divPlayer3">
       <audio id="audioPlayer" ontimeupdate="update(this)">
       <source src="Dragon_Steal.mp3"></source>
       </audio>
@@ -225,7 +225,7 @@ font-family: Underground;
 src: url(Fonts/Font3/Underground.woff);
 }
 	
-#divPlayer 
+#divPlayer, #divPlayer2, #divPlayer3 
 {
 width: 300px;
 margin-left: auto;
@@ -239,15 +239,10 @@ margin-top: 50px;
 
 button, input[type='button'], input[type='submit'] 
 {
-border-radius: 2px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 background: -webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);
 background: -moz-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);
 border: 1px solid #aaa;
 color: #444;
-margin-bottom: 0px;
-min-width: 4em;
-padding: 3px 12px 3px 12px;
 font-size: 12px;
 cursor: pointer;
 }
