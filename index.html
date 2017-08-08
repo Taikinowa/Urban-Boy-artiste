@@ -109,12 +109,15 @@
           var fraction = time / duration;
           var percent  = Math.ceil(fraction * 100);
 
-          var progress = document.querySelector('#progressBar');
-
+          var progress = document.querySelector('#progressBar1');
+	  var progress = document.querySelector('#progressBar2');
+	  var progress = document.querySelector('#progressBar1');
           progress.style.width = percent + '%';
           progress.textContent = percent + '%';
 
-		  document.querySelector('#progressTime').textContent = formatTime(time);
+		  document.querySelector('#progressTime1').textContent = formatTime(time);
+	          document.querySelector('#progressTime2').textContent = formatTime(time);
+	          document.querySelector('#progressTime3').textContent = formatTime(time);
       }
 
       function formatTime(time) {
