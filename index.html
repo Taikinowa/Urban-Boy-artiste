@@ -76,15 +76,19 @@
 	<hr>
 <script>
 
-      function play(idPlayer, control) {
+      function play(idPlayer, control1,control2,control3) {
           var player = document.querySelector('#' + idPlayer);
 
           if (player.paused) {
               player.play();
-              control.textContent = 'Pause';
+              control1.textContent = 'Pause';
+	      control2.textContent = 'Pause';
+	      control3.textContent = 'Pause';
           } else {
               player.pause();
-              control.textContent = 'Play';
+              control1.textContent = 'Play';
+	      control2.textContent = 'Play';
+	      control3.textContent = 'Play';
           }
       }
 
@@ -138,8 +142,10 @@
           }
       }
 
-      function clickProgress(idPlayer, control, event) {
-          var parent = getPosition(control);    // La position absolue de la progressBar
+      function clickProgress(idPlayer, control1,control2,control3, event) {
+          var parent = getPosition(control1);    // La position absolue de la progressBar
+	  var parent = getPosition(control2);
+          var parent = getPosition(control3);
           var target = getMousePosition(event); // L'endroit du la progressBar où on a cliqué
           var player = document.querySelector('#' + idPlayer);
 
