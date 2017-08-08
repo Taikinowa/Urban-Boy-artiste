@@ -17,8 +17,8 @@
       <source src="Street_Life.mp3"></source>
       </audio>
       <div>
-        <div id="progressBarControl1">
-          <div id="progressBar1">Pas de lecture</div>
+        <div id="progressBarControl">
+          <div id="progressBar">Pas de lecture</div>
         </div>
       </div>
       <button class="control" onclick="play('audioPlayer1', this)">Play</button>
@@ -39,8 +39,8 @@
       <source src="Elfian_Ride.mp3"></source>
       </audio>
       <div>
-        <div id="progressBarControl2">
-          <div id="progressBar2">Pas de lecture</div>
+        <div id="progressBarControl">
+          <div id="progressBar">Pas de lecture</div>
         </div>
       </div>
       <button class="control" onclick="play('audioPlayer2', this)">Play</button>
@@ -61,8 +61,8 @@
       <source src="Dragon_Steal.mp3"></source>
       </audio>
       <div>
-        <div id="progressBarControl3">
-        <div id="progressBar3">Pas de lecture</div>
+        <div id="progressBarControl">
+        <div id="progressBar">Pas de lecture</div>
         </div>
       </div>
       <button class="control" onclick="play('audioPlayer3', this)">Play</button>
@@ -110,9 +110,9 @@
           var fraction = time / duration;
           var percent  = Math.ceil(fraction * 100);
 
-          var progress = document.querySelector('#progressBar1');
-	  var progress = document.querySelector('#progressBar2');
-	  var progress = document.querySelector('#progressBar3');
+          var progress = document.querySelector('#progressBar');
+	  var progress = document.querySelector('#progressBar');
+	  var progress = document.querySelector('#progressBar');
           progress.style.width = percent + '%';
           progress.textContent = percent + '%';
 
@@ -149,9 +149,9 @@
           var x = target.x - parent.x;
           var y = target.y - parent.y;
 
-          var wrapperWidth = document.querySelector('#progressBarControl1').offsetWidth;
-	  var wrapperWidth = document.querySelector('#progressBarControl2').offsetWidth;
-	  var wrapperWidth = document.querySelector('#progressBarControl3').offsetWidth;
+          var wrapperWidth = document.querySelector('#progressBarControl').offsetWidth;
+	  var wrapperWidth = document.querySelector('#progressBarControl').offsetWidth;
+	  var wrapperWidth = document.querySelector('#progressBarControl').offsetWidth;
 
           var percent  = Math.ceil((x / wrapperWidth) * 100);
           var duration = player.duration;
