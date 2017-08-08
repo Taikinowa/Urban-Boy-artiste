@@ -112,7 +112,7 @@
 
           var progress = document.querySelector('#progressBar1');
 	  var progress = document.querySelector('#progressBar2');
-	  var progress = document.querySelector('#progressBar1');
+	  var progress = document.querySelector('#progressBar3');
           progress.style.width = percent + '%';
           progress.textContent = percent + '%';
 
@@ -149,7 +149,9 @@
           var x = target.x - parent.x;
           var y = target.y - parent.y;
 
-          var wrapperWidth = document.querySelector('#progressBarControl').offsetWidth;
+          var wrapperWidth = document.querySelector('#progressBarControl1').offsetWidth;
+	  var wrapperWidth = document.querySelector('#progressBarControl2').offsetWidth;
+	  var wrapperWidth = document.querySelector('#progressBarControl3').offsetWidth;
 
           var percent  = Math.ceil((x / wrapperWidth) * 100);
           var duration = player.duration;
