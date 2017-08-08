@@ -11,15 +11,25 @@
 <body>
   <h1>Urban Boy</h1>
   <hr>
-<p><h2>Street Life.mp3 ( 2:13 )</h2> <audio src="Street_Life.mp3" controls type="audio/mp3"></audio></p>
+<p><h2>Street Life.mp3 ( 2:13 )</h2> 
+   <div id="divPlayer">
+	   <audio id="audioPlayer" ontimeupdate="update(this)">
+		   <source src="Street_Life.mp3"></source>
+	   </audio>
+	<div>
+<div id="progressBarControl">
+ <div id="progressBar">Pas de lecture</div>
+        </div>
+      </div>
+
+      <button class="control" onclick="play('audioPlayer', this)">Play</button>
+      <button class="control" onclick="resume('audioPlayer')">Stop</button></p>
   <hr>
 <p><h2>Lord Rock ( ??? )</h2> <audio src="Lord_Rock.mp3" controls type="audio/mp3"></audio><p>
 
   <hr>
 
    <div id="divPlayer">
-	  <h1>Lite-Player</h1>
-	
       <audio id="audioPlayer" ontimeupdate="update(this)">
       <source src="Street_Life.mp3"></source>
       </audio>
