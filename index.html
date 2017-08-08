@@ -17,66 +17,71 @@
 
   <hr>
 
-  <audio id="audioPlayer">
-    <source src="hype_home.ogg">
-    <source src="hype_home.mp3">
-  </audio>
-<button class="control" onclick="play('audioPlayer', this)">Play</button>
-<button class="control" onclick="resume('audioPlayer')">Stop</button>
-  <span class="volume">
-    <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
-    <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
-    <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
-    <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
-    <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
-</span>
-  <div>
-    <div id="progressBarControl">
-        <div id="progressBar">Pas de lecture</div>
-    </div>
-</div>
-<audio id="audioPlayer" ontimeupdate="update(this)">
-  <script>
-    function update(player) 
-{
-    var duration = player.duration;    // Durée totale
-    var time     = player.currentTime; // Temps écoulé
-    var fraction = time / duration;
-    var percent  = Math.ceil(fraction * 100);
-    var progress = document.querySelector('#progressBar');
-    progress.style.width = percent + '%';
-    progress.textContent = percent + '%';
-}
-function play(idPlayer, control) 
-{
-    var player = document.querySelector('#' + idPlayer);
-    if (player.paused) 
-    {
-        player.play();
-        control.textContent = 'Pause';
-    } else 
-    {
-        player.pause(); 
-        control.textContent = 'Play';
-    }
-}
-function resume(idPlayer) 
-{
-    var player = document.querySelector('#' + idPlayer);
-    player.currentTime = 0;
-    player.pause();
-}
-function volume(idPlayer, vol) {
+   <div id="divPlayer">
+	  <h1>Lite-Player</h1>
+	
+      <audio id="audioPlayer" ontimeupdate="update(this)">
+      <source src="Street_Life.mp3"></source>
+      </audio>
 
-    var player = document.querySelector('#' + idPlayer);
+      <div>
+        <div id="progressBarControl">
+          <div id="progressBar">Pas de lecture</div>
+        </div>
+      </div>
 
-    
+      <button class="control" onclick="play('audioPlayer', this)">Play</button>
+      <button class="control" onclick="resume('audioPlayer')">Stop</button>
+	  
+      <span class="volume">
+        <a class="stick1" onclick="volume('audioPlayer', 0)"></a>
+        <a class="stick2" onclick="volume('audioPlayer', 0.3)"></a>
+        <a class="stick3" onclick="volume('audioPlayer', 0.5)"></a>
+        <a class="stick4" onclick="volume('audioPlayer', 0.7)"></a>
+        <a class="stick5" onclick="volume('audioPlayer', 1)"></a>
+      </span>	  
+	</div>
 
-    player.volume = vol;    
+	<script>
+      
+      function play(idPlayer, control) {
+          var player = document.querySelector('#' + idPlayer);
+	
+          if (player.paused) {
+              player.play();
+              control.textContent = 'Pause';
+          } else {
+              player.pause();	
+              control.textContent = 'Play';
+          }
+      }
 
-}
-  </script>
-  </body>
+      function resume(idPlayer) {
+          var player = document.querySelector('#' + idPlayer);
+	
+          player.currentTime = 0;
+          player.pause();
+      }
+	  
+      function volume(idPlayer, vol) {
+          var player = document.querySelector('#' + idPlayer);
+
+          player.volume = vol;	
+      }
+	  
+      function update(player) {
+          var duration = player.duration;    // Durée totale
+          var time     = player.currentTime; // Temps écoulé
+          var fraction = time / duration;
+          var percent  = Math.ceil(fraction * 100);
+
+          var progress = document.querySelector('#progressBar');
+	
+          progress.style.width = percent + '%';
+          progress.textContent = percent + '%';
+      }
+
+    </script>  </body>
 </html>
 
 <style>
