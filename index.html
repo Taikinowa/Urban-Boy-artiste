@@ -15,6 +15,11 @@
 <audio id="ALBUM" src="Arescan Melodia.mp3">
 </audio>
 <input type="button" value="Jouer l'album" onclick="JouerSon()" />
+<input type="button" value="Arrêt" id="Refresh" />
+<script>
+var refresh = window.getElementById('refresh');
+refresh.addEventListener('click', location.reload(), false);
+</script>
 <script>
 function JouerSon() 
 {
