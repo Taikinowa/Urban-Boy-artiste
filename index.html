@@ -10,12 +10,13 @@
 
 <body>
   <h1>Z-Ryk</h1>
-<fieldset><legend class="album">Arescan Melodia</legend>
+<p1>
+<h2 class="album">Arescan Melodia</h2>
 <audio id="ALBUM" src="Arescan Melodia.mp3">
 </audio>
 <input type="button" value="Jouer l'album" onclick="JouerSon()" />
 <input type="button" onclick='window.location.reload(false)' value="Arrêt"/>
-<fieldset>
+<p1>
 <script>
 function JouerSon() 
 {
@@ -229,6 +230,11 @@ font-family: Cavalier!important;
 text-shadow: red -1px 1px, red -1px -1px, red 1px 1px, red 1px -1px;
 color: black;
 font-size: 26px;
+}
+
+p1
+{
+border: 2px grey solid;
 }
 
 .album
