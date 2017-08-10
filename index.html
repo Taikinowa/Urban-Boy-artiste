@@ -11,6 +11,18 @@
 <body>
   <h1>Z-Ryk</h1>
 <hr>
+<h2 class="album">Arescan Melodia</h2>
+<audio autoplay="false" id="ALBUM" src="Arescan Melodia.mp3">
+</audio>
+<input type="button" value="Jouer l'album" onclick="JouerSon()" />
+<script>
+function JouerSon() 
+{
+    var sound = document.getElementById("ALBUM");
+    sound.play();
+}
+</script>
+<hr/>
 <p><h2>Street Life.mp3 ( 2:13 )</h2> 
   <div id="divPlayer1">
       <audio id="audioPlayer1" ontimeupdate="update(this)">
@@ -206,16 +218,21 @@ font-size: 13px;
 h1 
 {
 color: #2D58AE;
-font-size: 25px;
+font-size: 30px;
 font-family: Street;
 }
 
 h2
 {
-font-style: italic;
-font-family: Cavalier;
+font-family: Cavalier!important;
 text-shadow: red -1px 1px, red -1px -1px, red 1px 1px, red 1px -1px;
 color: black;
+font-size: 26px;
+}
+
+.album
+{
+color: darkskyblue;
 }
 
 hr 
