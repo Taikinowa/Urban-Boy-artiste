@@ -9,9 +9,14 @@
 </head>
 
 <body>
+
+<div style="position: fixed;">
+
   <h1 style="float:left;">Z-Ryk</h1>
+</div>  
 <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
-<div style="margin-left: 20px!important;" id="SkypeButton_Call_cedrik843_1">
+
+<div style="position:fixed; top: -25px;margin-left: 100px!important;" id="SkypeButton_Call_cedrik843_1">
  <script type="text/javascript">
  Skype.ui({
  "name": "dropdown",
@@ -21,6 +26,13 @@
  });
  </script>
 </div>
+
+<div style="position: fixed;margin-top: -65x; margin-left:0cm; height: 100%;overflow: hidden;width:10cm;">
+
+<div style="position: relative; top: 80px; overflow: scroll;margin-top: 0px; height: 80%;background-color:rgba(0,0,255,0.4);border:5px solid black;outline-color:2px solid red;border-radius:20px;">
+
+<br>
+<br>
 <p1>
 <h2 class="album">Arescan Melodia</h2>
 <audio id="ALBUM" src="Arescan Melodia.mp3">
@@ -145,6 +157,28 @@ function JouerSon()
       </span>	  
 	</div>
 </p>
+
+</div>
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<form style="margin-left: 30cm;">
+<textarea style="font-family:HP;min-width:7cm;min-height:6cm;font-size: 18px;" id="monta"></textarea>
+<select style="font-family: HP;" name="servicename" onchange="document.getElementById ('monta').value=this.value;">
+             <option style="font-family: HP;" value="">Quel est ton perso préféré dans Harry Potter ?</option>
+             <option style="font-family: HP;" value="Personnage principal de la série, il est ingénieux mais ne sais pas lire des consignes.">Harry Potter</option>
+             <option style="font-family: HP;" value="Directeur le plus respecté de tous, ses pouvoirs sont grands, mais c'est surtout son intelligence et sa ruse qui en font un excellent personnage.">Albus Dumbledore</option>
+             <option style="font-family: HP;" value="Meilleur ami de notre héros, c'est un formidable joueur d'échec et son côté sot cache son réel potentiel.">Ron Weasley</option>
+             <option style="font-family: HP;" value="Moldue la plus brillante parmi les sorcières (sauf peut-être Lilly Evans), elle reste la meilleure amie d'Harry et reste quand même très mignonne en plus de son intellect. 
+En bref, elle a tout pour elle !">Hermione Granger</option>
+             <option style="font-family: HP;" value="Parrain et personnage extrêmement brillant, il reste marrant et adorable, rusé, malin, il agit toujours pour le bien et on s'accroche vite à ce personnage affectueux.">Sirius Black</option>
+             <option style="font-family: HP;" value="Loup garou malin et sincère, membre des maraudeurs, il est vraiment sympa mais un peu lâche quand il s'agit de famille. Cependant, il n'a rien à envier à Sirius ou James, avec qui il passe de bons moments.">Remus Lupin</option>
+             <option style="font-family: HP;" value="Ah, notre métamophomage adorée <3 Drôle, intelligente, parfois sarcastique, sa force magique n'en demeure pas pour autant faible bien au contraire et elle agit toujours quand il le faut. Sa mort nous attristera toujours. ">Nymphadora Tonks</option>
+             <option style="font-family: HP;" value="Ce personnage à la fois décalé et beau, en apparence folle même, nous fait craquer. Dommage qu'elle ne soit pas avec Harry Potter en couple <3">Luna Lovegood</option>
+             <option style="font-family: HP;" value="Ironie, sarcasme, méchanceté, il est le maître de ces disciplines. Aussi intelligent qu'effrayant, qui aurait cru qu'il pouvait avoir autant d'amour pour une femme ? ">Severus Rogue</option>
+             <option style="font-family: HP;" value="Notre petit sot adoré ! Lui qui ne se rappelle rien, il est tout de même très intelligent, surtout en matière de botanique, personne ne le bat, ça non ! Et quelle évolution : battre Nagini ! Bravo Neville !">Neville Londubat</option>
+</select>
+</form>
    
 <script>
 
@@ -211,6 +245,7 @@ function JouerSon()
       }
 
     </script>
+
 	
 </body>
 </html>
@@ -225,18 +260,25 @@ font-size: 13px;
 
 h1 
 {
-color: #2D58AE;
-font-size: 30px;
-font-family: Street;
+color: white;
+font-size: 40px;
+font-family: StdPoint;
+text-shadow: red 1px 1px, red 1px -1px, red -1px 1px, red -1px -1px;
 }
 
 h2
 {
-font-family: Cavalier!important;
+font-family: WaltDisney!important;
 text-shadow: red -1px 1px, red -1px -1px, red 1px 1px, red 1px -1px;
 color: black;
 font-size: 26px;
 font-style: italic;
+text-transform: capitalize;
+}
+
+p
+{
+margin-left:2cm;
 }
 
 p1
@@ -248,6 +290,13 @@ padding: 5px 5px;
 background-image: url('Disque.png');
 background-position: center;
 background-size: 165px 110px;
+margin-left:2.5cm;
+}
+
+input.HP
+{
+font-family: HP;
+font-size: 30px;
 }
 
 .album
@@ -266,7 +315,7 @@ color: #555555;
 body
 {
 background-attachment:fixed;
-background-image: url('Skeleton.jpg');
+background-image: url('Skeleton.png');
 background-position: 50% 0px;
 background-repeat: no-repeat;
 background-size: 750px 100% ;
@@ -279,6 +328,35 @@ border: 5px solid red;
 
 }
 
+@font-face
+{
+font-family: StdPoint;
+src: url(Fonts/ZRyk/Test.ttf);
+}
+
+@font-face
+{
+font-family: WaltDisney;
+src: url(Fonts/WD/WD/WD.ttf);
+}
+
+@font-face
+{
+font-family: Gothical;
+src: url(Fonts/gothical/gothical/gothical.ttf);
+}
+
+@font-face
+{
+font-family: ResidentEvil;
+src: url(Fonts/ResEvil/ResEvil/Resident_Evil_Large.ttf);
+}
+
+@font-face
+{
+font-family: HP;
+src: url(Fonts/HP/HPw/HARRP.ttf);
+}
 
 @font-face
 {
