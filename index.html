@@ -158,6 +158,26 @@ function JouerSon()
 	</div>
 </p>
 
+<p><h2>7. Symphonia's Sorcerer (2:07)</h2>
+  <div id="divPlayer7">
+      <audio id="audioPlayer7" ontimeupdate="update(this)">
+      <source src="7. Symphonia's Sorcerer.mp3"></source>
+      </audio>
+	  <br><br>
+      <button class="control7" onclick="play('audioPlayer7', this)">Play</button>
+      <button class="control7" onclick="resume('audioPlayer7')">Stop</button>
+      <span class="volume">
+        <a class="stick1" onclick="volume('audioPlayer7', 0)"></a>
+        <a class="stick2" onclick="volume('audioPlayer7', 0.3)"></a>
+        <a class="stick3" onclick="volume('audioPlayer7', 0.5)"></a>
+        <a class="stick4" onclick="volume('audioPlayer7', 0.7)"></a>
+        <a class="stick5" onclick="volume('audioPlayer7', 1)"></a>
+      </span>	  
+	  <br><br>
+	<a target="_blank" href="Symphonia's Sorcerer.pdf"><button target="_blank" style="margin-left:30%;">Version PDF</button></a>
+	</div>
+	
+</p>
 </div>
 
 </div>
@@ -182,7 +202,7 @@ En bref, elle a tout pour elle !">Hermione Granger</option>
    
 <script>
 
-      function play(idPlayer, control1,control2,control3,control4,control5,control6) {
+      function play(idPlayer, control1,control2,control3,control4,control5,control6,control7) {
           var player = document.querySelector('#' + idPlayer);
 
           if (player.paused) {
@@ -193,6 +213,7 @@ En bref, elle a tout pour elle !">Hermione Granger</option>
   	      control4.textContent = 'Pause';
   	      control5.textContent = 'Pause';
   	      control6.textContent = 'Pause';
+  	      control7.textContent = 'Pause';
           } else {
               player.pause();
               control1.textContent = 'Play';
@@ -201,6 +222,7 @@ En bref, elle a tout pour elle !">Hermione Granger</option>
 	      control4.textContent = 'Play';
 	      control5.textContent = 'Play';
 	      control6.textContent = 'Play';
+	      control7.textContent = 'Play';
           }
       }
 
@@ -394,7 +416,7 @@ font-family: Underground;
 src: url(Fonts/Font3/Underground.woff);
 }
 	
-#divPlayer1, #divPlayer2, #divPlayer3,#divPlayer4,#divPlayer5,#divPlayer6 
+#divPlayer1, #divPlayer2, #divPlayer3,#divPlayer4,#divPlayer5,#divPlayer6,#divPlayer7
 {
 width: 300px;
 border: 3px solid #aaa;
@@ -436,6 +458,13 @@ background-image: url('Flag Oxoryn Deus.png');
 #divPlayer6
 {
 background-image: url('Flag Dark Demon.png');
+}
+
+#divPlayer7
+{
+background-position: 0px -125px;
+background-size: 340px 375px;
+background-image: url('Flag Sorcerer.png');
 }
 
 button, input[type='button'], input[type='submit'] 
